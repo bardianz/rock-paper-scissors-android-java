@@ -92,8 +92,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="D:\Downloads\kisspng-scissors-hair-cutting-shears-clip-art-scissors-png-clipart-5a76a71d4e0560.1728341715177254693196.png" />
-                                                <entry key="scalingPercent" value="95" />
+                                                <entry key="imagePath" value="D:\Downloads\rock-paper-scissors-line-icons-vector.jpg" />
+                                                <entry key="scalingPercent" value="106" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -126,7 +126,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="scisors" />
+                                      <entry key="generatePlayStoreIcon" value="false" />
+                                      <entry key="legacyIconShape" value="CIRCLE" />
+                                      <entry key="outputName" value="main_icon" />
                                     </map>
                                   </option>
                                 </PersistentState>

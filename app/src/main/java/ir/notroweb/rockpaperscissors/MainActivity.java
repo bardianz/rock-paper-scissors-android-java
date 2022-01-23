@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
     private TextView textView, resultTxtView;
     private ImageView paper, scissors, rock, userImage, pcImage;
     private int userChoice, pcChoice;
@@ -123,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
-
     }
 }
 
