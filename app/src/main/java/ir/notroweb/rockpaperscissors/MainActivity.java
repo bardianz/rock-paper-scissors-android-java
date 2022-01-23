@@ -1,5 +1,6 @@
 package ir.notroweb.rockpaperscissors;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -14,9 +15,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
-    private TextView textView;
+    private TextView textView, resultTxtView;
     private ImageView paper, scissors, rock, userImage, pcImage;
-    private int userChoice,pcChoice;
+    private int userChoice, pcChoice;
     private CardView pcCarView, userCardView;
 
     @Override
@@ -31,19 +32,13 @@ public class MainActivity extends AppCompatActivity {
         pcCarView = findViewById(R.id.cardViewPc);
 
         textView = findViewById(R.id.textView);
+        resultTxtView = findViewById(R.id.resultTxtView);
+        resultTxtView.setVisibility(View.INVISIBLE);
 
         paper = findViewById(R.id.paper);
         scissors = findViewById(R.id.scissors);
         rock = findViewById(R.id.rock);
 
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String text = userChoice + "";
-                textView.setText(text);
-            }
-        });
     }
 
     private int makeRandom() {
@@ -54,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void userSelect(View v) {
+        resultTxtView.setVisibility(View.INVISIBLE);
         switch (v.getId()) {
             case R.id.rock:
                 userChoice = 0;
@@ -68,9 +64,12 @@ public class MainActivity extends AppCompatActivity {
                 userImage.setImageResource(R.drawable.scissors);
                 break;
         }
-        userCardView.setVisibility(1);
+        userCardView.setVisibility(View.VISIBLE);
+        pcSelect();
+        game(userChoice, pcChoice);
 
     }
+
     public void pcSelect() {
         pcChoice = makeRandom();
         switch (pcChoice) {
@@ -84,8 +83,48 @@ public class MainActivity extends AppCompatActivity {
                 pcImage.setImageResource(R.drawable.scissors);
                 break;
         }
-        pcImage.setVisibility(1);
+        pcCarView.setVisibility(View.VISIBLE);
     }
-};
+
+    public void game(int user, int pc) {
+        resultTxtView.setVisibility(View.VISIBLE);
+        if (user == pc) {
+            resultTxtView.setText("Draw");
+            resultTxtView.setTextColor(getResources().getColor(R.color.black));
+
+        } else {
+            switch (pc) {
+                case 0:
+                    if (user == 1) {
+                        resultTxtView.setText("You Won :))");
+                        resultTxtView.setTextColor(getResources().getColor(R.color.green));
+                    } else {
+                        resultTxtView.setText("You lose :))");
+                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
+                    }
+                    break;
+                case 1:
+                    if (user == 2) {
+                        resultTxtView.setText("You Won :))");
+                        resultTxtView.setTextColor(getResources().getColor(R.color.green));
+                    } else {
+                        resultTxtView.setText("You lose :))");
+                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
+                    }
+                    break;
+                case 2:
+                    if (user == 0) {
+                        resultTxtView.setText("You lose :))");
+                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
+                    } else {
+                        resultTxtView.setText("You Won :))");
+                        resultTxtView.setTextColor(getResources().getColor(R.color.green));
+                    }
+                    break;
+            }
+        }
+
+    }
+}
 
 
