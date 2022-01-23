@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Rock_Paper_Scissors.iml" filepath="$PROJECT_DIR$/.idea/modules/Rock_Paper_Scissors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Rock_Paper_Scissors.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Rock_Paper_Scissors.app.iml" />
+    </modules>
+  </component>
+</project>
