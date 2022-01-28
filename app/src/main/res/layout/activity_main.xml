@@ -22,7 +22,6 @@
             android:id="@+id/pcImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="userSelect"
             app:srcCompat="@drawable/paper"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="29dp" />
@@ -45,7 +44,6 @@
             android:id="@+id/userImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="userSelect"
             app:srcCompat="@drawable/paper"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="29dp" />
