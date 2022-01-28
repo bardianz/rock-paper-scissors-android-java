@@ -88,35 +88,34 @@ public class MainActivity extends AppCompatActivity {
     public void game(int user, int pc) {
         resultTxtView.setVisibility(View.VISIBLE);
         if (user == pc) {
-            resultTxtView.setText("Draw");
+            resultTxtView.setText(getString(R.string.draw_text));                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
             resultTxtView.setTextColor(getResources().getColor(R.color.black));
 
         } else {
             switch (pc) {
                 case 0:
                     if (user == 1) {
-                        resultTxtView.setText("You Won :))");
+                        resultTxtView.setText(getString(R.string.win_text));
                         resultTxtView.setTextColor(getResources().getColor(R.color.green));
                     } else {
-                        resultTxtView.setText("You lose :))");
+                        resultTxtView.setText(getString(R.string.lose_text));                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
                         resultTxtView.setTextColor(getResources().getColor(R.color.red));
                     }
                     break;
                 case 1:
                     if (user == 2) {
-                        resultTxtView.setText("You Won :))");
+                        resultTxtView.setText(getString(R.string.win_text));
                         resultTxtView.setTextColor(getResources().getColor(R.color.green));
                     } else {
-                        resultTxtView.setText("You lose :))");
+                        resultTxtView.setText(getString(R.string.lose_text));                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
                         resultTxtView.setTextColor(getResources().getColor(R.color.red));
                     }
                     break;
                 case 2:
                     if (user == 0) {
-                        resultTxtView.setText("You lose :))");
-                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
+                        resultTxtView.setText(getString(R.string.lose_text));                        resultTxtView.setTextColor(getResources().getColor(R.color.red));
                     } else {
-                        resultTxtView.setText("You Won :))");
+                        resultTxtView.setText(getString(R.string.win_text));
                         resultTxtView.setTextColor(getResources().getColor(R.color.green));
                     }
                     break;
